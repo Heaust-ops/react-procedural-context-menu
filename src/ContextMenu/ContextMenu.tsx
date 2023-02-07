@@ -21,7 +21,7 @@ export interface ContextMenuProps {
   wrapperStyle?: CSSProperties;
 }
 
-export const ContextMenu: FunctionComponent<ContextMenuProps> = ({
+const ContextMenu: FunctionComponent<ContextMenuProps> = ({
   contextMenuItems,
   itemStyle,
   wrapperStyle,

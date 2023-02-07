@@ -19,7 +19,7 @@ interface ContextMenuWrapperDivProps extends HTMLAttributes<HTMLDivElement> {
   menus: ContextMenuPropsWithBindings;
 }
 
-export const ContextMenuWrapperDiv: FunctionComponent<ContextMenuWrapperDivProps> = ({
+const ContextMenuWrapperDiv: FunctionComponent<ContextMenuWrapperDivProps> = ({
   menus,
   itemStyle,
   wrapperStyle,
