@@ -98,6 +98,7 @@ function App() {
       style={{
         backgroundColor: backgorund,
         textAlign: "center",
+        overflowY: "scroll",
         fontFamily,
         fontSize,
         color,
@@ -124,9 +125,189 @@ function App() {
         <Importer pkg={true} />
       </div>
       <div style={{ textAlign: "left", padding: "1rem" }}>
-        <h2><h2>How to use, the easy way:</h2></h2>
-        <h2>Import the Wrapper Div,</h2>
-        <Importer content='import ContextMenuWrapperDiv from "./ContextMenu/ContextMenuWrapperDiv";' />
+        <h2>
+          <h2>How to use, the easy way:</h2>
+        </h2>
+        <h2>Step 1: Making a Menu</h2>
+        <ul>
+          <li>
+            {" "}
+            <h2 style={{ fontWeight: "normal" }}>
+              A menu is an array of small menu entries.
+            </h2>
+          </li>
+          <br />
+
+          <li>
+            <h2 style={{ fontWeight: "normal" }}>
+              A menu entry looks like this,
+            </h2>
+            <Importer content={'{ text: "Label for the entry" }'} />
+          </li>
+          <br />
+
+          <li>
+            {" "}
+            <h2 style={{ fontWeight: "normal" }}>
+              You can choose to do something, when it's clicked
+            </h2>
+            <Importer
+              content={`{
+          text: "Label1",
+          onClick: () => console.log('Label1 was Clicked')
+        }`}
+            />
+          </li>
+          <br />
+
+          <li>
+            <h2 style={{ fontWeight: "normal" }}>
+              Like this you can make a simple menu,
+            </h2>
+            <div>
+              <h2 style={{ fontWeight: "normal" }}>{`[ {
+          text: "Label1",
+          onClick: () => console.log('Label1 was Clicked')
+        },`}</h2>
+              <h2 style={{ fontWeight: "normal" }}>{`{
+          text: "Label2",
+          onClick: () => console.log('Label2 was Clicked')
+        } ]`}</h2>
+            </div>
+          </li>
+          <br />
+
+          <li>
+            <h2 style={{ fontWeight: "normal" }}>
+              A menu item can also have it's own submenu,
+            </h2>
+            <Importer
+              content={
+                '{ text: "Label for the entry", sub: [...another menu...] }'
+              }
+            />
+          </li>
+          <br />
+
+          <li>
+            <h2 style={{ fontWeight: "normal" }}>
+              Instead of plaintext you can also use a react component
+            </h2>
+            <Importer
+              content={
+                '{ component: <>Github <img src="https://github.com/Heaust-ops" /></> }'
+              }
+            />
+          </li>
+          <br />
+        </ul>
+
+        <br />
+        <h2>Step 2: Using the premade wrapper</h2>
+        <ul>
+          <li>
+            <h2 style={{ fontWeight: "normal" }}>
+              Import the wrapper div, this defines the region for context menu
+              action
+            </h2>
+            <Importer content='import ContextMenuWrapperDiv from "./ContextMenu/ContextMenuWrapperDiv";' />
+          </li>
+          <br />
+
+          <li>
+            <h2 style={{ fontWeight: "normal" }}>Make a menu collection,</h2>
+            <Importer content="menuCollection = { hotkeys: { shifta: someMenu }, contextMenu: someOtherMenu }" />
+          </li>
+          <br />
+
+          <li>
+            <h2 style={{ fontWeight: "normal" }}>
+              Use the wrapper div and pass it the menu collection
+            </h2>
+            <Importer content="<ContextMenuWrapperDiv menus={menuCollection}> {...content...} </ContextMenuWrapperDiv>" />
+          </li>
+          <br />
+
+          <li>
+            <h2 style={{ fontWeight: "normal" }}>
+              It behaves like a normal div and you can use all of a normal div's
+              props
+            </h2>
+          </li>
+          <br />
+
+          <li>
+            <h2 style={{ fontWeight: "normal" }}>
+              Moreover it takes in 2 additional props, itemStyle and
+              wrapperStyle
+            </h2>
+          </li>
+          <br />
+
+          <li>
+            <h2 style={{ fontWeight: "normal" }}>
+              itemStyle can be used to style the items in the context menu
+            </h2>
+          </li>
+          <br />
+
+          <li>
+            <h2 style={{ fontWeight: "normal" }}>
+              wrapperStyle can be used to style the wrapper of the context menu
+              itself
+            </h2>
+          </li>
+          <br />
+        </ul>
+
+        <h2>
+          <h2>How to use, for powerusers:</h2>
+        </h2>
+        <ul>
+          <li>
+            <h2 style={{ fontWeight: "normal" }}>
+              Import the ContextMenu Component
+            </h2>
+            <Importer content='import ContextMenu from "./ContextMenu/ContextMenu";' />
+          </li>
+          <br />
+
+          <li>
+            <h2 style={{ fontWeight: "normal" }}>
+              Unlike the wrapper div this takes in a single menu,
+            </h2>
+            <Importer content="<ContextMenu contextMenuItems={someMenu} >" />
+          </li>
+          <br />
+
+          <li>
+            <h2 style={{ fontWeight: "normal" }}>
+              This component is just the menu with no activation logic
+            </h2>
+          </li>
+          <br />
+
+          <li>
+            <h2 style={{ fontWeight: "normal" }}>
+              You have to implement the logic of when and where to render it yourself
+            </h2>
+          </li>
+          <br />
+
+          <li>
+            <h2 style={{ fontWeight: "normal" }}>
+              It still has itemStyle and wrapperStyle for the same reasons
+            </h2>
+          </li>
+          <br />
+
+          <li>
+            <h2 style={{ fontWeight: "normal" }}>
+              Tip: You can use wrapperStyle to position it
+            </h2>
+          </li>
+          <br />
+        </ul>
       </div>
     </ContextMenuWrapperDiv>
   );
