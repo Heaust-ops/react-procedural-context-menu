@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Pacifico&display=swap");
+
+.App {
+  background-color: #1e1e1e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg-gray {
+  backdrop-filter: brightness(2);
+  padding: 0.2rem;
+}
+
+.bg-gray-dark {
+  backdrop-filter: brightness(0.8);
+}
