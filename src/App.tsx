@@ -70,7 +70,7 @@ function App() {
           />
         </>
       ),
-      onClick: () => window.open("https://github.com/Heaust-ops/", "_blank"),
+      onClick: () => window.open("https://github.com/Heaust-ops/react-procedural-context-menu", "_blank"),
     },
     {
       component: (
@@ -210,7 +210,7 @@ function App() {
               Import the wrapper div, this defines the region for context menu
               action
             </h2>
-            <Importer content='import ContextMenuWrapperDiv from "./ContextMenu/ContextMenuWrapperDiv";' />
+            <Importer content='import { ContextMenuWrapperDiv } from "react-procedural-context-menu";' />
           </li>
           <br />
 
@@ -268,7 +268,7 @@ function App() {
             <h2 style={{ fontWeight: "normal" }}>
               Import the ContextMenu Component
             </h2>
-            <Importer content='import ContextMenu from "./ContextMenu/ContextMenu";' />
+            <Importer content='import { ContextMenu } from "react-procedural-context-menu";' />
           </li>
           <br />
 

@@ -7,11 +7,11 @@ interface ImporterProps {
 
 const Importer: FC<ImporterProps> = ({ pkg = false, content }) => {
   const [helperText, sethelperText] = useState(
-    content ?? "npm i react-context-menu"
+    content ?? "npm i react-procedural-context-menu"
   );
   const [copied, setcopied] = useState(false);
-  const yarnHelperText = "yarn add react-context-menu";
-  const npmHelperText = "npm i react-context-menu";
+  const yarnHelperText = "yarn add react-procedural-context-menu";
+  const npmHelperText = "npm i react-procedural-context-menu";
 
   useEffect(() => {
     let to: number;
