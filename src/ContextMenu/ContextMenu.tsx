@@ -5,7 +5,7 @@ import {
   useRef,
   useState,
 } from "react";
-import styles from "./ContextMenu.module.css";
+import "./ContextMenu.css";
 
 export interface ContextMenuItem {
   type?: string;
@@ -32,7 +32,7 @@ const ContextMenu: FunctionComponent<ContextMenuProps> = ({
   return (
     <div
       ref={ref}
-      className={`${styles.wrapper} unselectable`}
+      className={`_rpcm_wrapper unselectable`}
       style={wrapperStyle ? { ...wrapperStyle } : {}}
     >
       {contextMenuItems.map(
@@ -42,7 +42,7 @@ const ContextMenu: FunctionComponent<ContextMenuProps> = ({
             text: (
               <Fragment key={index}>
                 <div
-                  className={`${styles.item}`}
+                  className={`_rpcm_item`}
                   style={itemStyle ? { ...itemStyle } : {}}
                   onClick={() => {
                     if (item.onClick) item.onClick(item);

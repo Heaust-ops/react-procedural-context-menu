@@ -1,4 +1,4 @@
-.item {
+._rpcm_item {
   padding: 0.25rem;
   margin-bottom: 0.125rem;
   margin-top: 0.125rem;
@@ -7,17 +7,17 @@
   justify-content: space-between;
 }
 
-.item:hover {
+._rpcm_item:hover {
   filter: brightness(200%);
   background: rgba(255, 255, 255, 0.2);
 }
 
-.item:active {
+._rpcm_item:active {
   filter: brightness(100%);
   background: rgba(255, 255, 255, 0.3);
 }
 
-.wrapper {
+._rpcm_wrapper {
   opacity: 0.9;
   background-color: rgba(0, 0, 0);
   position: fixed;
