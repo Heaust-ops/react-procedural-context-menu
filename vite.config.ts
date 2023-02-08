@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 import dts from "vite-plugin-dts";
+import vitePluginCssModules from "vite-plugin-css-modules";
 
 export default defineConfig({
   build: {
@@ -22,5 +23,5 @@ export default defineConfig({
     sourcemap: true,
     emptyOutDir: true,
   },
-  plugins: [react(), dts()],
+  plugins: [react(), dts(), vitePluginCssModules()],
 });
