@@ -52,22 +52,6 @@ Or
 
 - wrapperStyle can be used to style the wrapper of the context menu itself
 
-##How to use, for powerusers:
-
-- Import the ContextMenu Component
-  `import ContextMenuWrapperDiv from "./ContextMenu/ContextMenu";`
-
-- Unlike the wrapper div this takes in a single menu,
-  `<ContextMenu contextMenuItems={someMenu} >`
-
-- This component is just the menu with no activation logic
-
-- You have to implement the logic of when and where to render it yourself
-
-- It still has itemStyle and wrapperStyle for the same reasons
-
-- Tip: You can use wrapperStyle to position it
-
 ## How to use, for powerusers:
 
 - Import the ContextMenu Component
