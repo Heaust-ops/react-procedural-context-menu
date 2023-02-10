@@ -2,6 +2,8 @@
 
 [demo](https://rpcm.netlify.app/)
 
+[codesandbox](https://codesandbox.io/p/sandbox/nostalgic-cloud-n1u302)
+
 ![ctxmenudemo](https://user-images.githubusercontent.com/54670936/217388273-066c9dc6-a065-42f6-9f70-deec1f72fb5e.gif)
 
 ### Install the package:
